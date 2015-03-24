@@ -67,7 +67,7 @@
     } else {
         NSLog(@"%ld days left until introductions.", (long) numberOfDays);
         
-        NSInteger oneLessDay = numberOfDays - 1;
+        NSInteger oneLessDay = --numberOfDays;
         [self countDownTillIntroduction:oneLessDay];
     }
 }
