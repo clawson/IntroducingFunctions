@@ -18,13 +18,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSString *myName = @"Dan Clawson";
-    NSString *introduction = [NSString stringWithFormat:@"My name is %@.", myName];
-    NSString *japaneseIntroduction = [myName stringByAppendingString:@" to moushimasu."];
+    
+    [self printIntroductions:myName];
     
 
-    NSLog(@"%@", introduction);
-    NSLog(@"%@", japaneseIntroduction);
-    
     return YES;
 }
 
@@ -48,6 +45,17 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) printIntroductions: (NSString *) name {
+    // Print introductions
+    
+    NSString *introduction = [NSString stringWithFormat:@"My name is %@.", name];
+    NSString *japaneseIntroduction = [name stringByAppendingString:@" to moushimasu."];
+    
+    NSLog(@"%@", introduction);
+    NSLog(@"%@", japaneseIntroduction);
+    
 }
 
 @end
