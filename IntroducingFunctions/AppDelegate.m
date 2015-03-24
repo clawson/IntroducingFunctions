@@ -16,7 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    NSString *myName = @"Dan Clawson";
+    NSString *introduction = [NSString stringWithFormat:@"My name is %@.", myName];
+    NSString *japaneseIntroduction = [myName stringByAppendingString:@" to moushimasu."];
+    
+
+    NSLog(@"%@", introduction);
+    NSLog(@"%@", japaneseIntroduction);
+    
     return YES;
 }
 
