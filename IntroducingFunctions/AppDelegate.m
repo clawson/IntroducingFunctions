@@ -19,6 +19,7 @@
 
     NSString *myName = @"Dan Clawson";
     
+    [self countDownTillIntroduction:4];
     [self printIntroductions:myName];
     
 
@@ -56,6 +57,19 @@
     NSLog(@"%@", introduction);
     NSLog(@"%@", japaneseIntroduction);
     
+}
+
+- (void) countDownTillIntroduction: (int) numberOfDays {
+    // Print introductions after specified number of days
+    
+    if (numberOfDays == 0) {
+        NSLog(@"The time has come.");
+    } else {
+        NSLog(@"%d days left until introductions.", numberOfDays);
+        
+        int oneLessDay = numberOfDays - 1;
+        [self countDownTillIntroduction:oneLessDay];
+    }
 }
 
 @end
